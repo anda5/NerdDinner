@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NerdDinner;
 using NerdDinner.Controllers;
+using NerdDinner.Models;
 
 namespace NerdDinner.Tests.Controllers
 {
@@ -50,5 +51,6 @@ namespace NerdDinner.Tests.Controllers
             // Assert
             Assert.IsNotNull(result);
         }
+
     }
 }

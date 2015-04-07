@@ -13,7 +13,15 @@ namespace NerdDinner.Controllers
     public class DinnersController : Controller
     {
         private DinnerDbContext db = new DinnerDbContext();
+        private IDinnerRepository repository = null;
 
+        public DinnersController()
+        {
+            this.repository = new DinnerRepository();
+        }
+        public DinnersController(DinnerRepository repository){
+            this.repository = repository;
+        }
         // GET: Dinners
         public ActionResult Index()
         {
